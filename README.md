@@ -1,23 +1,16 @@
 This project provides mail sending capabilities. 
 
-```javascript
-var s = "JavaScript syntax highlighting";
-alert(s);
-```
-
-
-    <dependency>
-      <groupId>org.celllife.mail</groupId>
-      <artifactId>celllife-mail</artifactId>
-      <version>1.0.0-SNAPSHOT</version>
-    </dependency>
-
 To use
 ======
 
 Step 1: Add the celllife-mail dependency in your pom.xml
 *root pom.xml*
 
+    <dependency>
+      <groupId>org.celllife.mail</groupId>
+      <artifactId>celllife-mail</artifactId>
+      <version>1.0.0-SNAPSHOT</version>
+    </dependency>
 
 *webapp pom.xml*
 
@@ -27,6 +20,7 @@ Step 1: Add the celllife-mail dependency in your pom.xml
     </dependency>
 
 Step 2: Create a file called spring-mail.xml under your META-INF/spring folder
+
     <?xml version="1.0" encoding="UTF-8"?>
     <beans xmlns="http://www.springframework.org/schema/beans"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -52,6 +46,7 @@ Step 2: Create a file called spring-mail.xml under your META-INF/spring folder
     </beans>
 
 Step 3: add the properties referenced above into your application.properties
+
     mailSender.username=technical@cell-life.org
     mailSender.password=xxxxxxxxxxxxx
     mailSender.host=smtp.gmail.com
@@ -62,8 +57,10 @@ Step 3: add the properties referenced above into your application.properties
     mailSender.smtp.starttls.enable=false
 
 Step 4: Autowire the MailService class where you want to use it
+
     @Autowired
     private MailService mailService
 
 Step 5: Use it
+
     mailService.sendEmail('dagmar@cell-life.org', 'technical@cell-life.org', 'test', 'this is a text email subject');
