@@ -1,7 +1,7 @@
 This project provides mail sending capabilities. 
 
-To use celllife-mail
-====================
+To use
+======
 
 Step 1: Add the celllife-mail dependency in your pom.xml
 *root pom.xml*
@@ -22,7 +22,7 @@ Step 1: Add the celllife-mail dependency in your pom.xml
 ```
 
 Step 2: Create a file called spring-mail.xml under your META-INF/spring folder
-```xml
+```
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -50,25 +50,18 @@ Step 2: Create a file called spring-mail.xml under your META-INF/spring folder
 ```
 
 Step 3: add the properties referenced above into your application.properties
-```bash
-# Email
-mailSender.username=technical@cell-life.org
-mailSender.password=xxxxxxxxxxxxx
-mailSender.host=smtp.gmail.com
-mailSender.protocol=smtps
-mailSender.from=technical@cell-life.org
-mailSender.port=465
-mailSender.smtp.auth=false
-mailSender.smtp.starttls.enable=false
-```
+    mailSender.username=technical@cell-life.org
+    mailSender.password=xxxxxxxxxxxxx
+    mailSender.host=smtp.gmail.com
+    mailSender.protocol=smtps
+    mailSender.from=technical@cell-life.org
+    mailSender.port=465
+    mailSender.smtp.auth=false
+    mailSender.smtp.starttls.enable=false
 
 Step 4: Autowire the MailService class where you want to use it
-```java
-@Autowired
-private MailService mailService
-```
+    @Autowired
+    private MailService mailService
 
 Step 5: Use it
-```java
-mailService.sendEmail('dagmar@cell-life.org', 'technical@cell-life.org', 'test', 'this is a text email subject');
-```
+    mailService.sendEmail('dagmar@cell-life.org', 'technical@cell-life.org', 'test', 'this is a text email subject');
