@@ -5,16 +5,19 @@ var s = "JavaScript syntax highlighting";
 alert(s);
 ```
 
-To use
-======
 
-Step 1: Add the celllife-mail dependency in your pom.xml
-*root pom.xml*
     <dependency>
       <groupId>org.celllife.mail</groupId>
       <artifactId>celllife-mail</artifactId>
       <version>1.0.0-SNAPSHOT</version>
     </dependency>
+
+To use
+======
+
+Step 1: Add the celllife-mail dependency in your pom.xml
+*root pom.xml*
+
 
 *webapp pom.xml*
 
