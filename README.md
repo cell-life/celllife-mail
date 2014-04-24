@@ -1,11 +1,11 @@
 This project provides mail sending capabilities. 
 
-To use the Mail
+To use celllife-mail
+====================
 
 Step 1: Add the celllife-mail dependency in your pom.xml
-root pom.xml
-```xml
-<!-- Cell-Life mail utility -->
+*root pom.xml*
+```
 <dependency>
   <groupId>org.celllife.mail</groupId>
   <artifactId>celllife-mail</artifactId>
@@ -13,9 +13,8 @@ root pom.xml
 </dependency>
 ```
 
-webapp pom.xml
-```xml
-<!-- Cell-Life mail utility -->
+*webapp pom.xml*
+```
 <dependency>
   <groupId>org.celllife.mail</groupId>
   <artifactId>celllife-mail</artifactId>
