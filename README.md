@@ -5,21 +5,21 @@ To use the Mail
 Step 1: Add the celllife-mail dependency in your pom.xml
 root pom.xml
 ```xml
-            <!-- Cell-Life mail utility -->
-            <dependency>
-                <groupId>org.celllife.mail</groupId>
-        	    <artifactId>celllife-mail</artifactId>
-        	    <version>1.0.0-SNAPSHOT</version>
-            </dependency>
+<!-- Cell-Life mail utility -->
+<dependency>
+  <groupId>org.celllife.mail</groupId>
+  <artifactId>celllife-mail</artifactId>
+  <version>1.0.0-SNAPSHOT</version>
+</dependency>
 ```
 
 webapp pom.xml
 ```xml
-        <!-- Cell-Life mail utility -->
-        <dependency>
-    	    <groupId>org.celllife.mail</groupId>
-    	    <artifactId>celllife-mail</artifactId>
-        </dependency>
+<!-- Cell-Life mail utility -->
+<dependency>
+  <groupId>org.celllife.mail</groupId>
+  <artifactId>celllife-mail</artifactId>
+</dependency>
 ```
 
 Step 2: Create a file called spring-mail.xml under your META-INF/spring folder
@@ -32,7 +32,7 @@ Step 2: Create a file called spring-mail.xml under your META-INF/spring folder
     <context:component-scan base-package="org.celllife.utilities.mail"/>
     
     <bean id="mailSender" class="org.springframework.mail.javamail.JavaMailSenderImpl">
-       	<property name="username" value="${mailSender.username}"/>
+    <property name="username" value="${mailSender.username}"/>
     	<property name="password" value="${mailSender.password}"/>
 		<property name="host" value="${mailSender.host}"/>
 		<property name="protocol" value="${mailSender.protocol}"/>
