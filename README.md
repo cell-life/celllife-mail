@@ -4,17 +4,17 @@ To use the Mail
 
 Step 1: Add the celllife-mail dependency in your pom.xml
 root pom.xml
-```
+```xml
             <!-- Cell-Life mail utility -->
             <dependency>
-        	    <groupId>org.celllife.mail</groupId>
+                <groupId>org.celllife.mail</groupId>
         	    <artifactId>celllife-mail</artifactId>
         	    <version>1.0.0-SNAPSHOT</version>
             </dependency>
 ```
 
 webapp pom.xml
-```
+```xml
         <!-- Cell-Life mail utility -->
         <dependency>
     	    <groupId>org.celllife.mail</groupId>
@@ -23,7 +23,7 @@ webapp pom.xml
 ```
 
 Step 2: Create a file called spring-mail.xml under your META-INF/spring folder
-```
+```xml
 <?xml version="1.0" encoding="UTF-8"?>
 <beans xmlns="http://www.springframework.org/schema/beans"
 	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
@@ -51,7 +51,7 @@ Step 2: Create a file called spring-mail.xml under your META-INF/spring folder
 ```
 
 Step 3: add the properties referenced above into your application.properties
-```
+```bash
 # Email
 mailSender.username=technical@cell-life.org
 mailSender.password=xxxxxxxxxxxxx
@@ -64,12 +64,12 @@ mailSender.smtp.starttls.enable=false
 ```
 
 Step 4: Autowire the MailService class where you want to use it
-```
+```java
 @Autowired
 private MailService mailService
 ```
 
 Step 5: Use it
-```
+```java
 mailService.sendEmail('dagmar@cell-life.org', 'technical@cell-life.org', 'test', 'this is a text email subject');
 ```
