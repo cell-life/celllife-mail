@@ -49,7 +49,7 @@ Step 2: Create a file called spring-mail.xml under your META-INF/spring folder
         </property>	
       </bean>
     </beans>
-```xml
+```
 
 Step 3: add the properties referenced above into your application.properties
 
@@ -74,5 +74,5 @@ Step 4: Autowire the MailService class where you want to use it
 Step 5: Use it
 
 ```java
-    mailService.sendEmail('dagmar@cell-life.org', 'technical@cell-life.org', 'test', 'this is a text email subject');
+    mailService.sendEmail("dagmar@cell-life.org", "technical@cell-life.org", "test", "this is a text email subject");
 ```
