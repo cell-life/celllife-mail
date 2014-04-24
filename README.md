@@ -6,11 +6,13 @@ To use
 Step 1: Add the celllife-mail dependency in your pom.xml
 *root pom.xml*
 
+```xml
     <dependency>
       <groupId>org.celllife.mail</groupId>
       <artifactId>celllife-mail</artifactId>
       <version>1.0.0-SNAPSHOT</version>
     </dependency>
+```
 
 *webapp pom.xml*
 
