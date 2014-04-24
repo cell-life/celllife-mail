@@ -1,5 +1,10 @@
 This project provides mail sending capabilities. 
 
+```javascript
+var s = "JavaScript syntax highlighting";
+alert(s);
+```
+
 To use
 ======
 
@@ -12,6 +17,7 @@ Step 1: Add the celllife-mail dependency in your pom.xml
     </dependency>
 
 *webapp pom.xml*
+
     <dependency>
       <groupId>org.celllife.mail</groupId>
       <artifactId>celllife-mail</artifactId>
