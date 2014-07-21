@@ -1,5 +1,8 @@
 package org.celllife.utilities.mail;
 
+import java.io.File;
+import java.net.URL;
+
 import org.junit.Ignore;
 import org.junit.Test;
 import org.junit.runner.RunWith;
@@ -25,4 +28,13 @@ public class MailServiceTest {
 		service.sendEmail("dagmar@cell-life.org", "technical@cell-life.org", "test", "testing new mail utility");
 		Thread.sleep(5000); // allow time for the email to send
 	}
+
+    @Test
+    @Ignore("actually sends an email")
+    public void testWithAttachmentHappyDay() throws Exception {
+        service.setFrom("technical@cell-life.org");
+        URL fileURL = this.getClass().getResource("/attachment.txt");
+        service.sendEmail("dagmar@cell-life.org", "test", "testing new mail utility", new File(fileURL.getFile()));
+        Thread.sleep(12000); // allow time for the email to send
+    }
 }
