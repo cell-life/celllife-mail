@@ -127,4 +127,8 @@ public class MailServiceImpl implements MailService {
             mailSender.send(msg);
         }
     }
+
+    public void setMailSender(JavaMailSender mailSender) {
+        this.mailSender = mailSender;
+    }
 }
