@@ -10,7 +10,7 @@ Step 1: Add the celllife-mail dependency in your pom.xml
     <dependency>
       <groupId>org.celllife.mail</groupId>
       <artifactId>celllife-mail</artifactId>
-      <version>1.0.0</version>
+      <version>1.0.1</version>
     </dependency>
 ```
 
@@ -26,10 +26,12 @@ Step 1: Add the celllife-mail dependency in your pom.xml
 Step 2: Create a file called spring-mail.xml under your META-INF/spring folder
 
 ```xml
-    <?xml version="1.0" encoding="UTF-8"?>
+<?xml version="1.0" encoding="UTF-8"?>
     <beans xmlns="http://www.springframework.org/schema/beans"
            xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-           xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+           xmlns:context="http://www.springframework.org/schema/context"
+           xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd
+                               http://www.springframework.org/schema/context http://www.springframework.org/schema/context/spring-context.xsd">
 
       <context:component-scan base-package="org.celllife.utilities.mail"/>
     
@@ -75,4 +77,5 @@ Step 5: Use it
 
 ```java
     mailService.sendEmail("dagmar@cell-life.org", "technical@cell-life.org", "test", "this is a text email subject");
+    mailService.sendEmail("dagmar@cell-life.org", "technical@cell-life.org", "test", "this is a text email subject", attachment);
 ```
